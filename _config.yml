@@ -1,21 +1,18 @@
-title: Abhishek Nagekar
-description: Web & Security Engineer
-site_title: '@abhn - Abhishek Nagekar'
+title: Jiyoon Oh
+description: Academic and Researcher
+site_title: "@askjiyun.github.io"
 
 # Build settings
 markdown: kramdown
 exclude: [vendor/ruby]
 
 # Personalization
-github_username: abhn
+github_username: yooni825
 blog_url: https://www.nagekar.com
-email: abhishek@nagekar.com
-keybase_username: abhn
-twitter_username: abhn_
-reddit_username: abhn
+email: jynoh825@gmail.com
 
 # absolute or relative
-profile_picture: assets/images/pp.jpg
+profile_picture: assets/images/jy.jpeg
 
 # Google Analytics ID
-google_analytics: 
+google_analytics:
