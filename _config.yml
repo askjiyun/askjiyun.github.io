@@ -1,5 +1,5 @@
 title: Jiyoon Oh
-description: Academic and Researcher
+description: AI & Data Enthusiast
 site_title: "@askjiyun.github.io"
 
 # Build settings
@@ -7,7 +7,7 @@ markdown: kramdown
 exclude: [vendor/ruby]
 
 # Personalization
-github_username: yooni825
+github_username: askjiyun
 blog_url: https://www.nagekar.com
 email: jynoh825@gmail.com
 
