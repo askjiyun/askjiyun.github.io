@@ -418,7 +418,7 @@ img {
 }
 
 #nav {
-  background: none;
+  background: linear-gradient(to bottom right, #38449b, #5483b9);
   background-repeat: repeat;
 }
 
@@ -440,6 +440,10 @@ a {
 }
 .extra-links a {
   margin: 0 12px;
+  color: white;
+}
+.extra-links a:hover {
+  color: #585858;
 }
 
 .head-inner-wrap {
