@@ -11,7 +11,7 @@ img {
 
 .head {
   color: #fff;
-  background: linear-gradient(to bottom right, #2c3e50, #4ca1af);
+  background: linear-gradient(to bottom right, #38449b, #5483b9);
   min-height: 100vh;
 
   display: -webkit-box;
@@ -26,10 +26,7 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-
-  background: transparent;
 }
-
 .head-title {
   display: inline-block;
   -webkit-transition: color ease-in-out 0.3s;
@@ -82,7 +79,7 @@ img {
 .head-punchline {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   text-align: center;
-  color: #fff;
+  color: #000;
   margin-top: 10px;
   font-size: 20px;
   font-size: 1.25rem;
@@ -206,7 +203,7 @@ img {
 }
 
 .section-wrapper:nth-child(odd) {
-  background: linear-gradient(145deg, #f0f4ff, #e4ecff);
+  background: linear-gradient(to bottom right, #38449b, #5483b9);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -268,7 +265,6 @@ img {
 }
 
 .footer {
-  background-color: #444;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,12 +275,8 @@ img {
   -ms-flex-align: center;
   align-items: center;
   min-height: 35px;
-  color: #fff;
+  color: #000000;
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
-
-  background: url(../images/background.png);
-  background-repeat: repeat;
-  background-attachment: fixed;
 }
 
 .footer-text a {
