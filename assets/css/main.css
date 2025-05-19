@@ -77,7 +77,7 @@ img {
 }
 
 .head-punchline {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   text-align: center;
   color: #000;
   margin-top: 10px;
@@ -198,7 +198,7 @@ img {
 }
 
 .nav-links {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
@@ -221,7 +221,7 @@ img {
 }
 
 .paragraph-text {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20.8px;
   font-size: 1.3rem;
   margin: 30px auto;
@@ -229,12 +229,12 @@ img {
 }
 
 .paragraph-text-normal {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #404040;
 }
 
 .pt-sans-font {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .skill-grid-item {
@@ -276,7 +276,7 @@ img {
   align-items: center;
   min-height: 35px;
   color: #000000;
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .footer-text a {
@@ -300,7 +300,7 @@ img {
   font-weight: bold;
   font-size: 20px;
   font-size: 1.25rem;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 10px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -418,7 +418,7 @@ img {
 }
 
 #nav {
-  background: url(../images/background.png);
+  background: none;
   background-repeat: repeat;
 }
 
@@ -437,6 +437,9 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 80px;
+}
+.extra-links a {
+  margin: 0 12px;
 }
 
 .head-inner-wrap {
