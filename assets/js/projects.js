@@ -109,6 +109,16 @@ let render_projects = (slug) => {
         "Practice and assignments for the Big Data Analysis course in the second semester of 2024",
       categories: ["all", "lecture"],
     },
+    {
+      image: "assets/images/white.jpg",
+      link: "https://github.com/askjiyun/Restoring-obfuscated-Hangeul-Review_Dacon",
+      title: "Restoring Obfuscated Hangeul Reviews",
+      demo: false,
+      technologies: ["NLP", "Korean PLM", "Dacon"],
+      description:
+        "Participated in the Dacon competition to restore obfuscated Korean reviews using PLMs. Achieved performance improvement by applying model comparison, data augmentation, and a two-stage decoding strategy.",
+      categories: ["all", "contest"],
+    },
   ];
 
   let projects = [];
