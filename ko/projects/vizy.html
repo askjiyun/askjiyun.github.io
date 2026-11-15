@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIZY — K-뷰티 AI 에이전트 — 오지윤</title>
+  <meta name="description" content="얼굴과 제품 이미지를 분석해 사용자 톤에 실제로 어울리는 K-뷰티 제품을 추천하고, 그 이유를 자연어로 설명하는 AI 에이전트입니다." />
+  <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/vizy.html" />
+  <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/vizy.html" />
+  <link rel="icon" href="../../favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <nav class="topnav" aria-label="Site">
+    <div class="topnav-inner">
+      <a href="../index.html" class="brand">오지윤</a>
+      <div class="topnav-right">
+      <div class="topnav-links">
+        <a href="../index.html#about">소개</a>
+        <a href="../index.html#experience">경력</a>
+        <a href="../index.html#projects">프로젝트</a>
+        <a href="../index.html#contact">연락처</a>
+      </div>
+      <div class="lang-switch" aria-label="Language"><a href="../../projects/vizy.html" lang="en">EN</a><a href="vizy.html" lang="ko" aria-current="page">KOR</a></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="detail">
+    <a class="back" href="../index.html#projects">← 전체 프로젝트</a>
+    <header class="detail-head">
+      <p class="card-tag">생성형 AI 수업 프로젝트</p>
+      <h1>VIZY — K-뷰티 AI 에이전트</h1>
+      <p class="lede">얼굴과 제품 이미지를 분석해 사용자 톤에 실제로 어울리는 K-뷰티 제품을 추천하고, 그 이유를 자연어로 설명하는 AI 에이전트입니다.</p>
+    </header>
+
+    <dl class="meta">
+      <div><dt>역할</dt><dd>프론트엔드 · AI 모델 개발</dd></div>
+      <div><dt>기간</dt><dd>2025.09 – 2025.12</dd></div>
+      <div><dt>기술</dt><dd>React, FastAPI, PostgreSQL + pgvector, OpenAI API</dd></div>
+    </dl>
+
+    <img class="detail-img" src="../../assets/img/vizy.jpg" alt="VIZY — K-뷰티 AI 에이전트 표지" />
+
+    <section class="detail-section">
+      <h2>개요</h2>
+      <p>제품 색상은 조명, 카메라, 필터에 따라 다르게 보이기 때문에 온라인 뷰티 추천은 자주 빗나갑니다. VIZY는 HEX 코드나 리뷰에 기대지 않고 LAB 색공간에서 색을 매칭한 뒤, RAG 기반 에이전트로 추천을 개인화하고 그 이유를 설명합니다.</p><p>주요 기능은 세 가지입니다. 사진 속 메이크업 색과 실제 제품을 매칭하는 Find the Look, 이미 쓰는 제품과 비슷한 대체 제품을 찾아 주는 Find the Match, 그리고 사용자 프로필·과거 피드백·제품 데이터·웹 검색을 활용해 질문에 답하는 AI 어시스턴트입니다.</p>
+    </section>
+
+    <figure class="detail-fig"><img class="detail-img" src="../../assets/img/vizy-architecture.jpg" alt="시스템 구조: React 프론트엔드, Node API 게이트웨이, 그리고 제품 매처·얼굴 매처·RAG 에이전트로 구성된 AI 코어" loading="lazy" /><figcaption>시스템 구조: React 프론트엔드, Node API 게이트웨이, 그리고 제품 매처·얼굴 매처·RAG 에이전트로 구성된 AI 코어</figcaption></figure>
+
+    <section class="detail-section">
+      <h2>담당 업무</h2>
+      <ul>
+        <li>뷰티 프로필, 이미지 업로드, 추천 결과, 채팅 화면 등 React 프론트엔드 개발</li>
+        <li>3인 팀에서 프론트엔드·AI 모델 개발을 맡은 2명 중 한 명으로 AI 파이프라인 개발 참여</li>
+        <li>얼굴 랜드마크로 입술·눈·볼 영역을 추출하고, LAB 색공간과 ΔE2000 색차로 673개 제품 DB와 색상 매칭</li>
+        <li>의도 분류(추천·설명·트렌드), 선호도 JSON 파싱, 제품·피드백 임베딩 벡터 검색(pgvector, HNSW), 브랜드·톤·피니시·키워드 기반 재랭킹으로 구성된 RAG 에이전트 구축</li>
+        <li>트렌드 질문에 답하기 위한 웹 검색, 대화가 쌓일수록 추천이 정교해지고 사용자가 초기화할 수 있는 대화 메모리 추가</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>결과</h2>
+      <ul>
+        <li>초기 계획(LLaMA 3 기반 단일 ΔE 색상 매칭)을 RAG, 재랭킹, 웹 검색, 개인화 메모리를 갖춘 AI 에이전트로 확장하고 서비스 배포</li>
+      </ul>
+    </section>
+
+    <div class="detail-links">
+      <a class="btn btn-primary" href="https://genai-project-11-final.vercel.app/" target="_blank" rel="noopener">라이브 데모 ↗</a>
+      <a class="btn" href="https://github.com/ljh040218/GENAI_project" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+
+    <nav class="pager" aria-label="다른 프로젝트">
+      <a class="next" href="momentum.html">다음 →<strong>Momentum</strong></a>
+    </nav>
+  </main>
+
+  <footer class="footer footer-narrow"><p>© 2026 오지윤 · 2026년 11월 업데이트</p></footer>
+</body>
+</html>

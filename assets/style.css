@@ -361,3 +361,34 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
   .card-featured { flex-direction: column; }
   .card-featured img { width: 100%; aspect-ratio: 16 / 9; border-right: none; border-bottom: 1px solid var(--line); }
 }
+
+/* ---------- language switch ---------- */
+.topnav-right { display: flex; align-items: center; gap: 22px; }
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.lang-switch a {
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: var(--faint);
+}
+.lang-switch a:hover { color: var(--text); text-decoration: none; }
+.lang-switch a[aria-current="page"] { background: var(--text); color: #fff; }
+
+/* ---------- Korean pages ---------- */
+html:lang(ko) body {
+  font-family: "Pretendard Variable", "Inter", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+html:lang(ko) .section-label { letter-spacing: 0.02em; font-size: 14px; }
+html:lang(ko) .meta dt { letter-spacing: 0.02em; }
+html:lang(ko) .hero h1 { letter-spacing: -0.02em; }
+html:lang(ko) .hero-line,
+html:lang(ko) .detail-head .lede { letter-spacing: -0.015em; }

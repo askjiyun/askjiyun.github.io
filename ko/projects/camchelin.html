@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camchelin — 오지윤</title>
+  <meta name="description" content="식당 리뷰를 분석해 한눈에 보이는 카테고리별 요약으로 바꿔 주는 딥러닝 시스템입니다." />
+  <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/camchelin.html" />
+  <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/camchelin.html" />
+  <link rel="icon" href="../../favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <nav class="topnav" aria-label="Site">
+    <div class="topnav-inner">
+      <a href="../index.html" class="brand">오지윤</a>
+      <div class="topnav-right">
+      <div class="topnav-links">
+        <a href="../index.html#about">소개</a>
+        <a href="../index.html#experience">경력</a>
+        <a href="../index.html#projects">프로젝트</a>
+        <a href="../index.html#contact">연락처</a>
+      </div>
+      <div class="lang-switch" aria-label="Language"><a href="../../projects/camchelin.html" lang="en">EN</a><a href="camchelin.html" lang="ko" aria-current="page">KOR</a></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="detail">
+    <a class="back" href="../index.html#projects">← 전체 프로젝트</a>
+    <header class="detail-head">
+      <p class="card-tag">딥러닝 프로젝트 · 리뷰 분석</p>
+      <h1>Camchelin</h1>
+      <p class="lede">식당 리뷰를 분석해 한눈에 보이는 카테고리별 요약으로 바꿔 주는 딥러닝 시스템입니다.</p>
+    </header>
+
+    <dl class="meta">
+      <div><dt>역할</dt><dd>딥러닝 파트</dd></div>
+      <div><dt>기간</dt><dd>2024.09 – 2025.02</dd></div>
+      <div><dt>기술</dt><dd>pko-T5, OpenAI GPT 파인튜닝, Python</dd></div>
+    </dl>
+
+    <img class="detail-img" src="../../assets/img/camchelin.jpg" alt="Camchelin 표지" />
+
+    <section class="detail-section">
+      <h2>개요</h2>
+      <p>플랫폼과 사용자 리뷰 데이터를 활용해 식당에 대한 긍정·부정 피드백과 그 근거가 되는 키워드를 찾아냅니다.</p>
+    </section>
+
+    
+
+    <section class="detail-section">
+      <h2>담당 업무</h2>
+      <ul>
+        <li>Hugging Face의 pko-t5-base 모델을 파인튜닝해 리뷰에서 키워드를 추출하고 긍정·부정을 분류</li>
+        <li>키워드를 맛, 서비스, 분위기, 위생, 가성비 5개 카테고리로 분류</li>
+        <li>파인튜닝한 GPT 모델로 카테고리별 대표 문장 생성</li>
+        <li>프로젝트 전반의 모델 학습, 성능 평가, 결과 분석 담당</li>
+      </ul>
+    </section>
+
+
+    <div class="detail-links">
+      <a class="btn btn-primary" href="https://github.com/CineNorte-WEB/DeepLearning" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+
+    <nav class="pager" aria-label="다른 프로젝트">
+      <a href="tobemom.html">← 이전<strong>To Be Mom</strong></a>
+      <a class="next" href="dacon.html">다음 →<strong>난독화된 한글 리뷰 복원</strong></a>
+    </nav>
+  </main>
+
+  <footer class="footer footer-narrow"><p>© 2026 오지윤 · 2026년 11월 업데이트</p></footer>
+</body>
+</html>
