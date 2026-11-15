@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIZY — K-Beauty AI Agent — Jiyoon Oh</title>
+  <meta name="description" content="An AI agent that analyzes face and product images, recommends K-beauty products that truly match the user&#x27;s tone, and explains why in natural language." />
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <nav class="topnav" aria-label="Site">
+    <div class="topnav-inner">
+      <a href="../index.html" class="brand">Jiyoon Oh</a>
+      <div class="topnav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="detail">
+    <a class="back" href="../index.html#projects">← All projects</a>
+    <header class="detail-head">
+      <p class="card-tag">Generative AI Course Project</p>
+      <h1>VIZY — K-Beauty AI Agent</h1>
+      <p class="lede">An AI agent that analyzes face and product images, recommends K-beauty products that truly match the user&#x27;s tone, and explains why in natural language.</p>
+    </header>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Front-end &amp; AI Model Developer</dd></div>
+      <div><dt>Period</dt><dd>Sep – Dec 2025</dd></div>
+      <div><dt>Tech</dt><dd>React, FastAPI, PostgreSQL + pgvector, OpenAI API</dd></div>
+    </dl>
+
+    <img class="detail-img" src="../assets/img/vizy.jpg" alt="VIZY — K-Beauty AI Agent cover" />
+
+    <section class="detail-section">
+      <h2>Overview</h2>
+      <p>Product colors look different across lighting, cameras, and filters, so online beauty recommendations often miss. VIZY matches colors in LAB space instead of relying on HEX codes or reviews, then uses a RAG-based agent to personalize recommendations and explain them.</p><p>It offers three features: Find the Look (match the makeup colors in a photo to real products), Find the Match (find similar alternatives to a product you already use), and an AI assistant that answers questions using your profile, past feedback, product data, and web search.</p>
+    </section>
+
+    <figure class="detail-fig"><img class="detail-img" src="../assets/img/vizy-architecture.jpg" alt="System architecture: React front end, Node API gateway, and an AI core with product matcher, face matcher, and RAG agent." loading="lazy" /><figcaption>System architecture: React front end, Node API gateway, and an AI core with product matcher, face matcher, and RAG agent.</figcaption></figure>
+
+    <section class="detail-section">
+      <h2>What I did</h2>
+      <ul>
+          <li>Developed the React front end, including the beauty profile, image upload, recommendation results, and chat interface.</li>
+          <li>Worked on the AI pipeline as one of two front-end and AI model developers on a three-person team.</li>
+          <li>Extracted lip, eye, and cheek regions with face landmarks and matched colors to a 673-product database using LAB color and the ΔE2000 color difference.</li>
+          <li>Built a RAG agent with intent classification (recommend, explain, trend), preference parsing into JSON, vector search over product and feedback embeddings (pgvector, HNSW), and rule-based re-ranking by brand, tone, finish, and keywords.</li>
+          <li>Added web search for trend questions and a conversation memory that improves recommendations over time and can be reset by the user.</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Result</h2>
+      <ul>
+          <li>Expanded the initial plan (single ΔE color match with LLaMA 3) into a full agent combining RAG, re-ranking, web search, and personalized memory, and deployed the service.</li>
+      </ul>
+    </section>
+
+    <div class="detail-links">
+        <a class="btn btn-primary" href="https://genai-project-11-final.vercel.app/" target="_blank" rel="noopener">Live demo ↗</a>
+        <a class="btn" href="https://github.com/ljh040218/GENAI_project" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="next" href="momentum.html">Next →<strong>Momentum</strong></a>
+      </nav>
+  </main>
+
+  <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>
+</body>
+</html>

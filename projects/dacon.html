@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restoring Obfuscated Korean Reviews — Jiyoon Oh</title>
+  <meta name="description" content="A national NLP competition on restoring Korean reviews that were deliberately obfuscated at the Jamo (character) level." />
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <nav class="topnav" aria-label="Site">
+    <div class="topnav-inner">
+      <a href="../index.html" class="brand">Jiyoon Oh</a>
+      <div class="topnav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="detail">
+    <a class="back" href="../index.html#projects">← All projects</a>
+    <header class="detail-head">
+      <p class="card-tag">NLP Competition · Dacon</p>
+      <h1>Restoring Obfuscated Korean Reviews</h1>
+      <p class="lede">A national NLP competition on restoring Korean reviews that were deliberately obfuscated at the Jamo (character) level.</p>
+    </header>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Participant</dd></div>
+      <div><dt>Period</dt><dd>Feb 2025</dd></div>
+      <div><dt>Tech</dt><dd>Korean PLMs (pko-T5, LLaMA), Python</dd></div>
+    </dl>
+
+    
+
+    <section class="detail-section">
+      <h2>Overview</h2>
+      <p>Reviews were scrambled at the level of individual Korean letters (Jamo). The task was to recover the original text.</p>
+    </section>
+
+    
+
+    <section class="detail-section">
+      <h2>What I did</h2>
+      <ul>
+          <li>Benchmarked Korean pre-trained language models, including LLaMA and pko-t5-base, reaching an initial accuracy of 0.71.</li>
+          <li>Applied data augmentation and designed a two-stage decoding architecture.</li>
+          <li>Tuned the input representation, decoding flow, and hyperparameters systematically.</li>
+          <li>Validated experimentally how Jamo-level preprocessing affects restoration accuracy.</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Result</h2>
+      <ul>
+          <li>Improved accuracy from 0.71 to 0.74.</li>
+      </ul>
+    </section>
+
+    <div class="detail-links">
+        <a class="btn btn-primary" href="https://github.com/askjiyun/Restoring-obfuscated-Hangeul-Review_Dacon" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+
+      <nav class="pager" aria-label="More projects">
+        <a href="camchelin.html">← Previous<strong>Camchelin</strong></a>
+      </nav>
+  </main>
+
+  <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>
+</body>
+</html>
