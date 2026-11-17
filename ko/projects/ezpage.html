@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ezpage — 오지윤</title>
+  <title>Ezpage — Jiyoon Oh</title>
   <meta name="description" content="해외 여행자가 현지 물가를 이해하고 정확하게 결제할 수 있도록 돕는 여행 경비 앱으로, 화폐 인식 모델을 기반으로 합니다." />
   <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/ezpage.html" />
   <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/ezpage.html" />
@@ -14,13 +14,13 @@
 <body>
   <nav class="topnav" aria-label="Site">
     <div class="topnav-inner">
-      <a href="../index.html" class="brand">오지윤</a>
+      <a href="../index.html" class="brand">Jiyoon Oh</a>
       <div class="topnav-right">
       <div class="topnav-links">
-        <a href="../index.html#about">소개</a>
-        <a href="../index.html#experience">경력</a>
-        <a href="../index.html#projects">프로젝트</a>
-        <a href="../index.html#contact">연락처</a>
+         <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
       </div>
       <div class="lang-switch" aria-label="Language"><a href="../../projects/ezpage.html" lang="en">EN</a><a href="ezpage.html" lang="ko" aria-current="page">KOR</a></div>
       </div>
@@ -28,50 +28,58 @@
   </nav>
 
   <main class="detail">
-    <a class="back" href="../index.html#projects">← 전체 프로젝트</a>
+    <a class="back" href="../index.html#projects">← All projects</a>
     <header class="detail-head">
-      <p class="card-tag">캡스톤 디자인 프로젝트 · 팀장</p>
+      <p class="card-tag">Capstone Design Project · Team Leader</p>
       <h1>Ezpage</h1>
       <p class="lede">해외 여행자가 현지 물가를 이해하고 정확하게 결제할 수 있도록 돕는 여행 경비 앱으로, 화폐 인식 모델을 기반으로 합니다.</p>
     </header>
 
     <dl class="meta">
-      <div><dt>역할</dt><dd>팀장 · AI 모델 개발</dd></div>
-      <div><dt>기간</dt><dd>2025.03 – 2025.06</dd></div>
-      <div><dt>기술</dt><dd>YOLOv8 (Ultralytics), Python, OCR</dd></div>
+      <div><dt>Role</dt><dd>Team Leader(PM) &amp; AI Developer</dd></div>
+      <div><dt>Period</dt><dd>Mar – Jun 2025</dd></div>
+      <div><dt>Tech</dt><dd>Python, YOLOv8, FastAPI, Flask, React Native, Django, Exchange rate API, Gemini API</dd></div>
     </dl>
 
-    
+    <img class="detail-img" src="../../assets/img/ezpage.jpg" alt="Ezpage 표지" />
 
     <section class="detail-section">
-      <h2>개요</h2>
-      <p>해외에서는 지폐와 동전을 구분하기 어렵고, 실제 가격 감각을 잡기도 쉽지 않습니다. Ezpage는 OCR과 화폐 인식으로 결제를 안내하고 지출을 자동으로 기록합니다.</p>
+      <h2>Overview</h2>
+      <p>해외여행 중 익숙하지 않은 지폐와 동전으로 결제할 때 발생하는 불편을 해결하기 위해 기획한 AI 기반 여행 결제 가이드 앱입니다. 화폐 및 메뉴판 이미지를 인식해 현지 금액을 원화로 환산하고, 사용자의 보유 화폐를 바탕으로 결제에 필요한 화폐 조합과 예상 거스름돈을 시각적으로 안내합니다.</p>
     </section>
 
-    
+    <figure class="detail-fig"><img class="detail-img" src="../../assets/img/ezpage-payment.jpg" alt="지불 가이드: 사용자의 지갑 정보를 바탕으로 어떤 지폐를 내면 되는지와 예상 거스름돈을 보여줍니다." loading="lazy" /><figcaption>지불 가이드: 사용자의 지갑 정보를 바탕으로 어떤 지폐를 내면 되는지와 예상 거스름돈을 보여줍니다.</figcaption></figure>
+
+    <figure class="detail-fig"><img class="detail-img" src="../../assets/img/ezpage-detection.jpg" alt="합성 테스트 이미지에 대한 최종 모델의 탐지 결과: 신·구 1만 엔권의 앞·뒷면을 모두 0.98의 신뢰도로 탐지합니다. 이런 학습 이미지는 자동으로 합성하고 라벨링했습니다." loading="lazy" /><figcaption>합성 테스트 이미지에 대한 최종 모델의 탐지 결과: 신·구 1만 엔권의 앞·뒷면을 모두 0.98의 신뢰도로 탐지합니다. 이런 학습 이미지는 자동으로 합성하고 라벨링했습니다.</figcaption></figure>
 
     <section class="detail-section">
-      <h2>담당 업무</h2>
+      <h2>Key Contributions</h2>
       <ul>
-        <li>PM으로서 팀을 이끌며 기획과 실행 총괄</li>
-        <li>사진에서 화폐 종류와 권종을 인식하고 실시간 환율로 원화 합계를 계산하는 비전 모델 Global Money Scanner 설계·개발</li>
-        <li>미국 달러·일본 엔 지폐와 동전 이미지를 수집하고 회전·밝기 조정으로 데이터 증강</li>
-        <li>YOLO 형식으로 라벨링한 뒤 YOLOv8을 파인튜닝하고, 클래스 불균형에 대응하며 mAP로 성능 모니터링</li>
-        <li>모델을 모바일 앱에 통합해 결제 안내와 자동 지출 기록 기능 구현</li>
+        <li><strong>서비스 아이디어 기획:</strong> 해외여행에서 경험한 현금 결제의 불편을 바탕으로 프로젝트 아이디어를 제안하고, 화폐의 액면가를 인식하는 기능을 넘어 실제 결제 방법을 안내하는 서비스를 기획.</li>
+        <li><strong>팀 리딩 및 MVP 범위 조정:</strong> 5인 팀의 팀장·PM으로서 개발 일정과 역할을 조율. 프론트엔드와 백엔드 담당자가 각각 한 명인 상황에서 제한된 기간 내 핵심 기능을 완성할 수 있도록 기능별 우선순위를 정하고 부가 기능의 개발 범위를 조정.</li>
+        <li><strong>YOLOv8 기반 화폐 인식 모델 개발:</strong> 미국 달러와 일본 엔의 지폐·동전 이미지 데이터를 수집·가공하고, 데이터 증강 및 합성 이미지 생성과 YOLOv8 모델 학습·검증에 참여. 촬영 이미지에서 화폐 종류와 권종을 탐지하고 보유 금액을 계산하는 기능 개발.</li>
+        <li><strong>AI 모델 및 서비스 연동:</strong> AI 모델 추론 결과를 앱에서 활용할 수 있도록 API 연동을 수행하고, 프론트엔드 개발자의 API 연동 문제 해결을 지원하여 모바일 앱의 기능 통합에 기여.</li>
+        <li><strong>사용자 중심 결제 경험 개선:</strong> 화폐를 정확하게 인식하는 것만으로는 실제 결제의 어려움을 해결할 수 없다는 점에 주목. 사용자의 보유 화폐를 기준으로 지불 조합과 예상 거스름돈을 직관적으로 확인할 수 있도록 결제 가이드 기능을 구체화.</li>
       </ul>
     </section>
 
+    <section class="detail-section challenges">
+      <h2>Outcome &amp; Learnings</h2>
+      <p>메뉴판 인식, 화폐 스캔, 환율 환산, 지불 가이드 및 여행 경비 관리 기능을 포함한 모바일 앱 프로토타입을 완성했습니다.</p>
+      <p>프로젝트를 진행하며 높은 모델 성능만으로는 사용자의 문제가 해결되지 않는다는 점을 배웠습니다. 사용자가 필요로 하는 것은 화폐의 액면가 자체보다 실제 결제 상황에서 무엇을 내야 하는지 판단할 수 있는 정보였습니다.</p>
+      <p>또한 제한된 인력과 일정 속에서 모든 기능을 구현하기보다 핵심 사용자 경험에 집중하고, 개발 과정에서 발생하는 기술적 문제까지 함께 해결하며 서비스를 완성하는 것이 PM의 중요한 역할임을 경험했습니다.</p>
+    </section>
 
     <div class="detail-links">
       <a class="btn btn-primary" href="https://github.com/Sungshin-Capstone/ezpage_AI" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
 
-    <nav class="pager" aria-label="다른 프로젝트">
-      <a href="medimate.html">← 이전<strong>MediMate</strong></a>
-      <a class="next" href="tobemom.html">다음 →<strong>To Be Mom</strong></a>
+    <nav class="pager" aria-label="More projects">
+      <a href="medimate.html">← Previous<strong>MediMate</strong></a>
+      <a class="next" href="tobemom.html">Next →<strong>To Be Mom</strong></a>
     </nav>
   </main>
 
-  <footer class="footer footer-narrow"><p>© 2026 오지윤 · 2026년 11월 업데이트</p></footer>
+  <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>
 </body>
 </html>

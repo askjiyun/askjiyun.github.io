@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>난독화된 한글 리뷰 복원 — 오지윤</title>
-  <meta name="description" content="자모 단위로 의도적으로 난독화된 한글 리뷰를 원래 문장으로 복원하는 NLP 경진대회입니다." />
+  <title>난독화된 한글 리뷰 복원 — Jiyoon Oh</title>
+  <meta name="description" content="소리 나는 대로 적거나 의미 없는 받침을 붙이는 식으로 난독화된 한글 리뷰를 원래 문장으로 복원하는 Dacon 경진대회입니다." />
   <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/dacon.html" />
   <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/dacon.html" />
   <link rel="icon" href="../../favicon.ico" />
@@ -14,13 +14,13 @@
 <body>
   <nav class="topnav" aria-label="Site">
     <div class="topnav-inner">
-      <a href="../index.html" class="brand">오지윤</a>
+      <a href="../index.html" class="brand">Jiyoon Oh</a>
       <div class="topnav-right">
       <div class="topnav-links">
-        <a href="../index.html#about">소개</a>
-        <a href="../index.html#experience">경력</a>
-        <a href="../index.html#projects">프로젝트</a>
-        <a href="../index.html#contact">연락처</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
       </div>
       <div class="lang-switch" aria-label="Language"><a href="../../projects/dacon.html" lang="en">EN</a><a href="dacon.html" lang="ko" aria-current="page">KOR</a></div>
       </div>
@@ -28,43 +28,42 @@
   </nav>
 
   <main class="detail">
-    <a class="back" href="../index.html#projects">← 전체 프로젝트</a>
+    <a class="back" href="../index.html#projects">← All projects</a>
     <header class="detail-head">
       <p class="card-tag">NLP 경진대회 · Dacon</p>
       <h1>난독화된 한글 리뷰 복원</h1>
-      <p class="lede">자모 단위로 의도적으로 난독화된 한글 리뷰를 원래 문장으로 복원하는 NLP 경진대회입니다.</p>
+      <p class="lede">자모 변형과 비표준 표기로 난독화된 한국어 리뷰를 원래 의미에 맞는 자연스러운 문장으로 복원하는 NLP 경진대회 프로젝트입니다.</p>
     </header>
 
     <dl class="meta">
-      <div><dt>역할</dt><dd>참가자</dd></div>
-      <div><dt>기간</dt><dd>2025.02</dd></div>
-      <div><dt>기술</dt><dd>한국어 PLM(pko-T5, LLaMA), Python</dd></div>
+      <div><dt>Role</dt><dd>Participant</dd></div>
+      <div><dt>Period</dt><dd>2025.02</dd></div>
+      <div><dt>Tech</dt><dd>Korean PLM(pko-T5, LLaMA), Python</dd></div>
     </dl>
 
     
 
     <section class="detail-section">
-      <h2>개요</h2>
-      <p>리뷰가 한글 자모 단위로 뒤섞여 있었고, 원래 문장을 복원하는 것이 과제였습니다.</p>
+      <h2>Overview</h2>
+      <p>한글 리뷰는 자모 치환, 발음 기반 변형, 비표준 표기 등 다양한 방식으로 난독화될 수 있으며, 이러한 표현을 원래의 문장으로 복원하려면 한국어의 언어적 특성과 문맥을 함께 고려해야 합니다.</p>
+      <p>Dacon 난독화 한글 리뷰 복원 경진대회에 참가하여 한국어 사전학습 언어모델의 복원 성능을 비교하고, 다양한 난독화 패턴을 활용한 데이터 증강과 모델 학습 전략을 실험했습니다.</p>
     </section>
 
     
 
     <section class="detail-section">
-      <h2>담당 업무</h2>
+      <h2>What I did</h2>
       <ul>
-        <li>LLaMA, pko-t5-base 등 한국어 사전학습 모델을 비교해 초기 정확도 0.71 달성</li>
-        <li>데이터 증강과 2단계 디코딩 구조 설계</li>
-        <li>입력 표현, 디코딩 흐름, 하이퍼파라미터를 체계적으로 튜닝</li>
-        <li>자모 단위 전처리가 복원 정확도에 미치는 영향을 실험으로 검증</li>
+        <li><strong>한국어 언어모델 비교 및 파인튜닝:</strong> LLaMA-DNA, pko-T5, EXAONE 등 다양한 한국어 사전학습 모델의 리뷰 복원 성능을 비교하고, LoRA 및 4-bit 양자화 기반 파인튜닝 실험 수행</li>
+        <li><strong>한글 난독화 데이터 증강:</strong> 자모 치환, 발음 변형, 연음 등 다양한 난독화 규칙을 적용하고, 역방향 난독화 모델을 활용해 학습 데이터를 약 11,000개에서 100,000개 규모로 확장</li>
+        <li><strong>2단계 복원 전략 실험:</strong> 1차 복원 결과에 남아 있는 오류를 줄이기 위해 2차 복원 모델을 적용하고, 단일 모델 추론과의 성능 비교 수행</li>
       </ul>
     </section>
 
     <section class="detail-section">
-      <h2>결과</h2>
-      <ul>
-        <li>정확도를 0.71에서 0.74로 향상</li>
-      </ul>
+      <h2>Result &amp; Learnings</h2>
+      <p>다양한 모델과 데이터 증강 전략을 실험하여 문자 단위 F1 Score를 초기 약 0.71에서 0.74로 개선했습니다.</p>
+      <p>2단계 복원 전략은 예상과 달리 단일 모델보다 낮은 성능을 보여, 복원 단계를 추가하는 것이 항상 결과 개선으로 이어지지는 않는다는 점을 확인했습니다.</p>
     </section>
 
     <div class="detail-links">
@@ -72,10 +71,10 @@
     </div>
 
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="camchelin.html">← 이전<strong>Camchelin</strong></a>
+      <a href="camchelin.html">← Previous<strong>Camchelin</strong></a>
     </nav>
   </main>
 
-  <footer class="footer footer-narrow"><p>© 2026 오지윤 · 2026년 11월 업데이트</p></footer>
+  <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>
 </body>
 </html>

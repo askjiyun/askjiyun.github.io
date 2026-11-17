@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jiyoon Oh</title>
-  <meta name="description" content="Jiyoon Oh — M.S. student in Management Information Systems at Seoul National University. AI, data quality, and enterprise chatbots." />
+  <meta name="description" content="Jiyoon Oh — M.S. student in Management Information Systems at Seoul National University." />
   <meta name="google-site-verification" content="k4p92PduVR_7ZqAlB8-OMnONNOl9GkkmUh4dlKfbY7o" />
   <meta property="og:title" content="Jiyoon Oh" />
-  <meta property="og:description" content="M.S. student in MIS at Seoul National University — AI, data quality, and enterprise chatbots." />
+  <meta property="og:description" content="M.S. student in MIS at Seoul National University" />
   <meta property="og:image" content="https://askjiyun.github.io/assets/img/profile.jpg" />
   <link rel="icon" href="favicon.ico" />
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -36,7 +36,7 @@
       <div>
         <h1>Jiyoon Oh</h1>
         <p class="hero-role">M.S. Student, Management Information Systems<br />Seoul National University</p>
-        <p class="hero-line">I work where AI meets business — building practical AI tools and studying how to make the data behind enterprise chatbots trustworthy.</p>
+        <p class="hero-line">I explore how AI creates real value at the intersection of technology and business.</p>
         <div class="hero-links">
           <a class="btn btn-primary" href="mailto:jynoh825@gmail.com">Email</a>
           <a class="btn" href="assets/Jiyoon_Oh_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
@@ -49,7 +49,9 @@
     <section id="about" class="section">
       <h2 class="section-label">About</h2>
       <div class="section-body prose">
-        <p>Master's student in the IDSLab at SNU's Graduate School of Business (advisor: Prof. Jinsoo Park), researching how to evaluate the quality of QA datasets behind enterprise AI systems such as RAG-based chatbots. Previously studied AI Convergence at Sungshin Women's University, worked in NLP and generative-model research labs, and built an internal document-search chatbot as an AI intern.</p>
+        <p>I care not only about building technology, but also about the value it creates for users.</p>
+        <p>With a background in AI Convergence, I have worked on projects involving natural language processing, computer vision, and generative AI. Through developing an AI-powered travel payment guide, a restaurant review analysis platform, and a medication management app, I gained experience in AI model development, product planning, and user-centered design.</p>
+        <p>These experiences taught me that strong technical performance matters, but solving real user problems is equally important. I am currently pursuing an M.S. in Management Information Systems at Seoul National University, where I study how AI can be effectively adopted and used in organizational settings.</p>
       </div>
     </section>
 
@@ -66,7 +68,7 @@
         <div class="row">
           <div>
             <h3>Sungshin Women's University</h3>
-            <p class="row-sub">B.S. in AI Convergence · GPA 4.11 / 4.5</p>
+            <p class="row-sub">B.S. in AI Convergence · GPA 4.09 / 4.5</p>
           </div>
           <span class="row-date">2021 – 2025</span>
         </div>
@@ -86,24 +88,26 @@
             <span class="row-date">Jul – Aug 2025</span>
           </summary>
           <ul>
-            <li>Curated and validated multilingual QA datasets: refined Korean–English passage translations, labeled passage–question relevance pairs, and improved data quality.</li>
+            <li>Validated a Korean–English QA dataset for the lab's multilingual QA research: checked each passage's English translation, rewrote ones that were wrong, missing, or cut off mid-sentence, and labeled whether each passage was relevant to its question.</li>
+            <li>Built LDA and BERTopic pipelines on KoWiki and radio dialogue data, grouping dialogue into five-turn chunks so topics reflected the conversation. Chose the number of topics by coherence, compared the models on coherence, diversity, and silhouette scores, and explored Contextualized Topic Models (CTM).</li>
             <li>Studied RAG and generation methods (generative retrieval, chain-of-thought) and RL techniques for NLP (PPO, DPO, GRPO, RLHF) in weekly seminars.</li>
-            <li>Implemented LDA and BERTopic pipelines on KoWiki and dialogue data and evaluated them with coherence and diversity metrics.</li>
+            <li>Validating QA data by hand showed me how easily translation and labeling errors enter a dataset, and turned my interest toward data quality for trustworthy AI systems.</li>
             <li>Advised by Prof. Youngjoong Ko.</li>
-          </ul>
+          </ul> 
         </details>
         <details class="xp">
           <summary>
             <div>
               <h3>AI Intern</h3>
-              <p class="row-sub">Ssanyong Lift</p>
+              <p class="row-sub">Ssanyong Lift · Construction & Material Handling Equipment Company</p>
             </div>
             <span class="row-date">Jun – Dec 2024</span>
           </summary>
           <ul>
-            <li>Designed and built an AI-powered internal chatbot that streamlined document search and reduced customer response time.</li>
-            <li>Advised marketing staff on practical uses of AI to optimize their workflows.</li>
-            <li>Saw firsthand how AI adoption has an immediate, visible impact at small and mid-sized companies.</li>
+            <li>Developed a prototype internal CS chatbot to help employees answer equipment troubleshooting and product inquiries without manually searching through multiple manuals. Organized PDF product manuals and real Naver TalkTalk inquiries by category, prepared JSONL training data, fine-tuned GPT-4o-mini, and built a Flask-based chatbot prototype.</li>
+            <li>Tested the chatbot on real-world customer inquiries and identified hallucinations and inconsistent responses. The process exposed data-readiness challenges, including fragmented documentation and similar product names that were difficult to distinguish. The chatbot was not deployed because its responses were not sufficiently reliable for operational use.</li>
+            <li>Developed an AI-assisted content creation guideline for the marketing team, combining Naver SEO keyword research, structured blog writing, ChatGPT and Wrtn prompts, and human verification of technical product information. Helped reduce blog-writing time from approximately 2 hours to 1 hour per post (50%).</li>
+            <li>Gained firsthand insight into how data quality and organizational readiness shape the practical adoption of AI in SMEs, motivating my subsequent research interest in data quality for enterprise AI systems.</li>
           </ul>
         </details>
         <details class="xp">
@@ -115,8 +119,12 @@
             <span class="row-date">Jun 2024 – Dec 2025</span>
           </summary>
           <ul>
-            <li>Studied the theory and implementation of diffusion models through Hugging Face's Diffusion Course and the diffusers library.</li>
-            <li>Compared recent text-to-video models (Lumiere, Stable Video Diffusion) and reviewed and presented DiT: Scalable Diffusion Models with Transformers (ICCV 2023).</li>
+            <li>Took my first research question all the way to a paper: whether an Instagram image and its Korean hashtag are semantically consistent. It began as a UROP study and became a first-author manuscript with Prof. Jangmin Oh, now under revision.</li>
+            <li>Rebuilt the dataset at scale: 12,011 image–hashtag pairs from 1,673 posts across 32 domains, scored on a 1–5 consistency scale by GPT-4o-mini under a written annotation guideline, with a self-consistency check of the labels.</li>
+            <li>Found that my earlier results were inflated because images from the same post appeared in both training and test sets, and fixed it by splitting at the post level (StratifiedGroupKFold).</li>
+            <li>Compared CLIP and KoCLIP under three training strategies against SVM and XGBoost baselines, evaluated with macro-F1 and per-class recall because the classes are imbalanced.</li>
+            <li>Went through peer review: ran additional experiments for reviewers, revised the manuscript, and wrote the response letters.</li>
+            <li>Presented and ran lab paper seminars, including a review of DiT (ICCV 2023). Studied diffusion models through Hugging Face's Diffusion Course and the diffusers library, and compared text-to-video models (Lumiere, Stable Video Diffusion).</li>
             <li>Advised by Prof. Jangmin Oh.</li>
           </ul>
         </details>
@@ -129,10 +137,11 @@
             <span class="row-date">Sep 2024 – Jan 2025</span>
           </summary>
           <ul>
-            <li>Designed a multimodal model that predicts whether an Instagram image matches its hashtags.</li>
-            <li>Compared similarity-based classification, classifier-only training, and full fine-tuning on CLIP and Ko-CLIP; similarity-based classification performed best.</li>
-            <li>Analyzed Ko-CLIP's pre-training and data-alignment limits and showed room for improvement through fine-tuning.</li>
-          </ul>
+            <li>Started from a pattern I kept seeing on Instagram: brand hashtags such as #OliveYoungSale attached to posts unrelated to the brand. Set out to build a model that judges whether an image and its Korean hashtag actually match.</li>
+            <li>Collected Instagram posts and hashtags myself and compared three strategies on CLIP and KoCLIP: similarity-based classification, a classifier on frozen embeddings, and full fine-tuning.</li>
+            <li>English CLIP couldn't read Korean hashtags well, so I moved to KoCLIP. Matching posts far outnumbered mismatches, so I used cross-validation to keep minority cases in every split.</li>
+            <li>Found that small crawled data and noisy hashtag labels limited the model more than the training strategy did.</li>
+            <li>This study became the starting point of my first-author paper (see Undergraduate Researcher above).</li>          </ul>
         </details>
       </div>
     </section>
@@ -147,7 +156,7 @@
               <p class="card-tag">Latest · Generative AI Course</p>
               <h3>VIZY — K-Beauty AI Agent</h3>
               <p>Matches makeup colors from face and product photos to real products, then personalizes and explains recommendations with a RAG-based agent.</p>
-              <p class="card-tech">React · FastAPI · pgvector · OpenAI API</p>
+              <p class="card-tech">GPT-4o-mini · RAG · pgvector · React</p>
               <span class="card-more">View project →</span>
             </div>
           </a>
@@ -170,11 +179,11 @@
             </div>
           </a>
           <a class="card" href="projects/ezpage.html">
-            <div class="cover cover-ezpage" role="img" aria-label="Ezpage cover"><span>Ezpage</span><small>Global Money Scanner</small></div>
+            <img src="assets/img/ezpage-cover.jpg" alt="Ezpage app cover" loading="lazy" />
             <div class="card-body">
-              <p class="card-tag">Capstone · Team Leader</p>
+              <p class="card-tag">Capstone · Team Leader(PM)</p>
               <h3>Ezpage</h3>
-              <p>Travel expense app with a YOLOv8 model that recognizes foreign bills and coins and converts them to KRW.</p>
+              <p>AI-powered travel payment app that recognizes foreign currency and recommends payment combinations and expected change based on the cash in your wallet.</p>
               <span class="card-more">View project →</span>
             </div>
           </a>
@@ -192,7 +201,7 @@
             <div class="card-body">
               <p class="card-tag">NLP · Review Analysis</p>
               <h3>Camchelin</h3>
-              <p>Sentiment and keyword extraction from restaurant reviews, with generated summaries by category.</p>
+              <p>An AI-powered restaurant review platform that highlights both positive and negative feedback, helping students make more balanced dining decisions..</p>
               <span class="card-more">View project →</span>
             </div>
           </a>

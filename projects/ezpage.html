@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ezpage — Jiyoon Oh</title>
   <meta name="description" content="A travel expense app that helps international travelers understand local prices and pay correctly, powered by a currency-recognition model." />
+  <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/ezpage.html" />
+  <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/ezpage.html" />
   <link rel="icon" href="../favicon.ico" />
   <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/style.css" />
@@ -13,6 +15,7 @@
   <nav class="topnav" aria-label="Site">
     <div class="topnav-inner">
       <a href="../index.html" class="brand">Jiyoon Oh</a>
+      <div class="topnav-right">
       <div class="topnav-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#experience">Experience</a>
@@ -29,44 +32,54 @@
     <header class="detail-head">
       <p class="card-tag">Capstone Design Project · Team Leader</p>
       <h1>Ezpage</h1>
-      <p class="lede">A travel expense app that helps international travelers understand local prices and pay correctly, powered by a currency-recognition model.</p>
+      <p class="lede">An AI-powered travel payment guide that helps travelers recognize foreign currency, understand local prices, and determine which bills and coins to use when paying..</p>
     </header>
 
     <dl class="meta">
-      <div><dt>Role</dt><dd>Team Leader &amp; AI Model Developer</dd></div>
+      <div><dt>Role</dt><dd>Team Leader(PM) &amp; AI Developer</dd></div>
       <div><dt>Period</dt><dd>Mar – Jun 2025</dd></div>
-      <div><dt>Tech</dt><dd>YOLOv8 (Ultralytics), Python, OCR</dd></div>
+      <div><dt>Tech</dt><dd>Python, YOLOv8, FastAPI, Flask, React Native, Django, Exchange rate API, Gemini API</dd></div>
     </dl>
 
-    
+    <img class="detail-img" src="../assets/img/ezpage.jpg" alt="Ezpage cover" />
 
     <section class="detail-section">
       <h2>Overview</h2>
-      <p>Travelers abroad often struggle to tell bills and coins apart and to sense what things really cost. Ezpage uses OCR and currency recognition to guide payments and log expenses automatically.</p>
+      <p>Ezpage is an AI-powered travel payment app inspired by the difficulties I experienced when using unfamiliar cash abroad.</p>
+      <p>It helps travelers recognize foreign bills and coins, understand local prices in their home currency, and determine how to pay using the cash they have. Rather than simply identifying currency denominations, Ezpage provides visual guidance on which bills and coins to use and how much change to expect.</p>
     </section>
 
-    
+    <figure class="detail-fig"><img class="detail-img" src="../assets/img/ezpage-payment.jpg" alt="Payment guide: based on the user&#x27;s wallet, the app suggests which bills to pay with and shows the expected change." loading="lazy" /><figcaption>Payment guide: based on the user&#x27;s wallet, the app suggests which bills to pay with and shows the expected change.</figcaption></figure>
 
-    <section class="detail-section">
-      <h2>What I did</h2>
+    <figure class="detail-fig"><img class="detail-img" src="../assets/img/ezpage-detection.jpg" alt="The final model on a synthetic test image: old and new 10,000-yen designs, front and back, each detected at 0.98 confidence. Training images like this were composed and labeled automatically." loading="lazy" /><figcaption>The final model on a synthetic test image: old and new 10,000-yen designs, front and back, each detected at 0.98 confidence. Training images like this were composed and labeled automatically.</figcaption></figure>
+    
+    <section class="detail-section challenges">
+      <h2>Key Contributions</h2>
       <ul>
-          <li>Led the team as project manager, overseeing planning and execution.</li>
-          <li>Designed and built the Global Money Scanner, a vision model that detects currency type and denomination from a photo and converts the total to KRW at real-time exchange rates.</li>
-          <li>Collected USD and JPY bill and coin images and augmented them (rotation, brightness) for robustness.</li>
-          <li>Annotated data in YOLO format and fine-tuned YOLOv8, addressing class imbalance and monitoring performance with mAP.</li>
-          <li>Integrated the model into the mobile app for payment guidance and automatic expense logging.</li>
+        <li><strong>Product Ideation &amp; Problem Definition:</strong> Initiated the project based on a personal travel experience. Defined the core problem as helping travelers make confident payment decisions,rather than simply recognizing foreign currency.</li>        
+        <li><strong>Project Leadership &amp; MVP Prioritization:</strong> Led a five-member team, coordinating development schedules, responsibilities, and priorities. With limited frontend and backend resources, prioritized essential AI-powered payment features and reduced the scope of nonessential functionality to deliver a working prototype within the timeline.</li>
+        <li><strong>YOLOv8-Based Currency Recognition:</strong> Contributed to collecting and preprocessing USD and JPY banknote and coin images, generating augmented and synthetic training data, and training and evaluating a YOLOv8 object detection model. Developed functionality to identify currency denominations, count detected bills and coins, and calculate their total value.</li>
+        <li><strong>AI Integration &amp; Cross-Functional Development:</strong> Integrated AI model inference with the mobile application through APIs. Leveraged my frontend development experience to help resolve API integration challenges, supporting communication between the AI, backend, and frontend components.</li>
+        <li><strong>User-Centered Payment Experience:</strong> Recognized that accurate currency detection alone did not fully solve the user's problem. Helped extend the service to recommend payment combinations based on the cash available in the user's wallet and visually display theexpected change.</li>
       </ul>
+    </section>
+
+    <section class="detail-section challenges">
+      <h2>Outcome &amp; Learnings</h2>
+      <p>Delivered a functional mobile app prototype integrating menu recognition, currency scanning, exchange-rate conversion, payment guidance, and travel expense management.</p>
+      <p>The project reinforced that strong model performance does not necessarily translate into a useful product. What travelers needed was not simply information about currency denominations, but clear guidance on which bills and coins to use in an actual payment situation.</p>
+      <p>As a project leader, I learned to balance user needs with technical feasibility, make deliberate trade-offs under time and resource constraints, and contribute hands-on when technical challenges threatened the team's progress.</p>
     </section>
 
 
     <div class="detail-links">
-        <a class="btn btn-primary" href="https://github.com/Sungshin-Capstone/ezpage_AI" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-primary" href="https://github.com/Sungshin-Capstone/ezpage_AI" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
 
-      <nav class="pager" aria-label="More projects">
-        <a href="medimate.html">← Previous<strong>MediMate</strong></a>
-        <a class="next" href="tobemom.html">Next →<strong>To Be Mom</strong></a>
-      </nav>
+    <nav class="pager" aria-label="More projects">
+      <a href="medimate.html">← Previous<strong>MediMate</strong></a>
+      <a class="next" href="tobemom.html">Next →<strong>To Be Mom</strong></a>
+    </nav>
   </main>
 
   <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>

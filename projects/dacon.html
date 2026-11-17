@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Restoring Obfuscated Korean Reviews — Jiyoon Oh</title>
   <meta name="description" content="A national NLP competition on restoring Korean reviews that were deliberately obfuscated at the Jamo (character) level." />
+  <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/dacon.html" />
+  <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/dacon.html" />
   <link rel="icon" href="../favicon.ico" />
   <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/style.css" />
@@ -13,6 +15,7 @@
   <nav class="topnav" aria-label="Site">
     <div class="topnav-inner">
       <a href="../index.html" class="brand">Jiyoon Oh</a>
+      <div class="topnav-right">
       <div class="topnav-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#experience">Experience</a>
@@ -29,7 +32,7 @@
     <header class="detail-head">
       <p class="card-tag">NLP Competition · Dacon</p>
       <h1>Restoring Obfuscated Korean Reviews</h1>
-      <p class="lede">A national NLP competition on restoring Korean reviews that were deliberately obfuscated at the Jamo (character) level.</p>
+      <p class="lede">An NLP competition project focused on restoring Korean reviews distorted by character substitutions, phonetic variations, and nonstandard spelling.</p>
     </header>
 
     <dl class="meta">
@@ -42,7 +45,8 @@
 
     <section class="detail-section">
       <h2>Overview</h2>
-      <p>Reviews were scrambled at the level of individual Korean letters (Jamo). The task was to recover the original text.</p>
+      <p>Korean reviews can be obfuscated through character substitutions, phonetic variations, and nonstandard spelling. Restoring the original text requires understanding both Korean linguistic patterns and sentence context.</p>
+      <p>In the Dacon Korean Review Restoration Competition, I compared Korean pre-trained language models and experimented with data augmentation techniques and training strategies to recover readable, contextually accurate Korean text.</p>
     </section>
 
     
@@ -50,27 +54,26 @@
     <section class="detail-section">
       <h2>What I did</h2>
       <ul>
-          <li>Benchmarked Korean pre-trained language models, including LLaMA and pko-t5-base, reaching an initial accuracy of 0.71.</li>
-          <li>Applied data augmentation and designed a two-stage decoding architecture.</li>
-          <li>Tuned the input representation, decoding flow, and hyperparameters systematically.</li>
-          <li>Validated experimentally how Jamo-level preprocessing affects restoration accuracy.</li>
+        <li><strong>Model Benchmarking &amp; Fine-tuning:</strong> Compared Korean pre-trained language models, including LLaMA-DNA, pko-T5, and EXAONE, and experimented with LoRA-based fine-tuning and 4-bit quantization.</li>
+        <li><strong>Korean Text Data Augmentation:</strong> Applied character substitutions, phonetic variations, and Korean-specific noise patterns. Combined rule-based augmentation with a reverse obfuscation model, expanding the training dataset from approximately 11,000 to 100,000 samples.</li>
+        <li><strong>Two-Stage Restoration Experiments:</strong> Tested a second restoration model to correct errors remaining after the initial inference and compared its performance with a single-stage approach.</li>
       </ul>
     </section>
 
     <section class="detail-section">
-      <h2>Result</h2>
-      <ul>
-          <li>Improved accuracy from 0.71 to 0.74.</li>
-      </ul>
+      <h2>Results &amp; Learnings</h2>
+      <p>Experimented with multiple language models and data augmentation strategies, improving the character-level F1 score from approximately 0.71 to 0.74.</p>
+      <p>The two-stage restoration approach performed worse than single-stage inference, demonstrating that additional inference stages do not necessarily improve text restoration quality.
+  </p>
     </section>
 
     <div class="detail-links">
-        <a class="btn btn-primary" href="https://github.com/askjiyun/Restoring-obfuscated-Hangeul-Review_Dacon" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-primary" href="https://github.com/askjiyun/Restoring-obfuscated-Hangeul-Review_Dacon" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
 
-      <nav class="pager" aria-label="More projects">
-        <a href="camchelin.html">← Previous<strong>Camchelin</strong></a>
-      </nav>
+    <nav class="pager" aria-label="More projects">
+      <a href="camchelin.html">← Previous<strong>Camchelin</strong></a>
+    </nav>
   </main>
 
   <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>

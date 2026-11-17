@@ -392,3 +392,7 @@ html:lang(ko) .meta dt { letter-spacing: 0.02em; }
 html:lang(ko) .hero h1 { letter-spacing: -0.02em; }
 html:lang(ko) .hero-line,
 html:lang(ko) .detail-head .lede { letter-spacing: -0.015em; }
+
+/* challenges list on project pages */
+.challenges li { margin-bottom: 12px; }
+.challenges li strong { display: block; color: var(--text); margin-bottom: 2px; }

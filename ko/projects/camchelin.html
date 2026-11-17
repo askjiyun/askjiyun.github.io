@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Camchelin — 오지윤</title>
-  <meta name="description" content="식당 리뷰를 분석해 한눈에 보이는 카테고리별 요약으로 바꿔 주는 딥러닝 시스템입니다." />
+  <title>Camchelin — Jiyoon Oh</title>
+  <meta name="description"  content="Camchelin은 긍정·부정 리뷰를 분석해 음식점의 장단점을 한눈에 보여주고, 균형 있는 맛집 선택을 돕는 AI 리뷰 인사이트 플랫폼입니다."/>
   <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/camchelin.html" />
   <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/camchelin.html" />
   <link rel="icon" href="../../favicon.ico" />
@@ -14,13 +14,13 @@
 <body>
   <nav class="topnav" aria-label="Site">
     <div class="topnav-inner">
-      <a href="../index.html" class="brand">오지윤</a>
+      <a href="../index.html" class="brand">Jiyoon Oh</a>
       <div class="topnav-right">
       <div class="topnav-links">
-        <a href="../index.html#about">소개</a>
-        <a href="../index.html#experience">경력</a>
-        <a href="../index.html#projects">프로젝트</a>
-        <a href="../index.html#contact">연락처</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
       </div>
       <div class="lang-switch" aria-label="Language"><a href="../../projects/camchelin.html" lang="en">EN</a><a href="camchelin.html" lang="ko" aria-current="page">KOR</a></div>
       </div>
@@ -28,49 +28,61 @@
   </nav>
 
   <main class="detail">
-    <a class="back" href="../index.html#projects">← 전체 프로젝트</a>
+    <a class="back" href="../index.html#projects">← All projects</a>
     <header class="detail-head">
       <p class="card-tag">딥러닝 프로젝트 · 리뷰 분석</p>
       <h1>Camchelin</h1>
-      <p class="lede">식당 리뷰를 분석해 한눈에 보이는 카테고리별 요약으로 바꿔 주는 딥러닝 시스템입니다.</p>
+      <p class="lede">긍정적인 리뷰에 가려진 부정적 의견까지 함께 보여주어, 사용자가 음식점의 장단점을 균형 있게 판단할 수 있도록 돕는 AI 기반 맛집 리뷰 인사이트 플랫폼입니다.</p>
     </header>
 
     <dl class="meta">
-      <div><dt>역할</dt><dd>딥러닝 파트</dd></div>
-      <div><dt>기간</dt><dd>2024.09 – 2025.02</dd></div>
-      <div><dt>기술</dt><dd>pko-T5, OpenAI GPT 파인튜닝, Python</dd></div>
+      <div><dt>Role</dt><dd>AI Developer</dd></div>
+      <div><dt>Period</dt><dd>2024.09 – 2025.02</dd></div>
+      <div><dt>Tech</dt><dd>Python, Hugging Face Transformers, pko-T5, OpenAI GPT Fine-tuning, FastAPI, Docker</dd></div>
     </dl>
 
     <img class="detail-img" src="../../assets/img/camchelin.jpg" alt="Camchelin 표지" />
 
     <section class="detail-section">
-      <h2>개요</h2>
-      <p>플랫폼과 사용자 리뷰 데이터를 활용해 식당에 대한 긍정·부정 피드백과 그 근거가 되는 키워드를 찾아냅니다.</p>
+      <h2>Overview</h2>
+      <p>기존 맛집 검색 플랫폼에서는 높은 별점과 긍정 리뷰에 가려진 부정적 평가를 파악하기 어렵고, 음식점의 장단점을 확인하기 위해 수많은 리뷰를 직접 읽어야 한다는 문제가 있었습니다.</p>
+      <p>Camchelin은 이를 해결하기 위해 음식점 리뷰에서 긍정·부정 키워드를 추출하고, 맛·서비스·위생·분위기·가성비의 5가지 카테고리별 대표 문장을 제공하는 AI 기반 맛집 리뷰 분석 플랫폼입니다. 사용자가 긍정적 의견뿐 아니라 부정적 의견도 함께 살펴보고 음식점을 보다 균형 있게 판단할 수 있도록 설계했습니다.</p>
     </section>
 
-    
-
     <section class="detail-section">
-      <h2>담당 업무</h2>
+      <h2>AI System Pipeline</h2>
+      <p>Naver Place, Kakao Map 및 사용자 작성 리뷰를 분석하기 위해 두 단계의 NLP 파이프라인을 구축했습니다.</p>
+      <img class="detail-img" src="../../assets/img/camchelin-ai-pipeline.jpg" alt="Camchelin AI review analysis pipeline" loading="lazy"/>
+    </section> 
+
+    <section class="detail-section challenges">
+      <h2>Key Contributions</h2>
       <ul>
-        <li>Hugging Face의 pko-t5-base 모델을 파인튜닝해 리뷰에서 키워드를 추출하고 긍정·부정을 분류</li>
-        <li>키워드를 맛, 서비스, 분위기, 위생, 가성비 5개 카테고리로 분류</li>
-        <li>파인튜닝한 GPT 모델로 카테고리별 대표 문장 생성</li>
-        <li>프로젝트 전반의 모델 학습, 성능 평가, 결과 분석 담당</li>
+        <li><strong>리뷰 데이터 수집 및 학습 데이터 구축:</strong> Naver Place 및 Kakao Map의 음식점 리뷰 데이터를 수집·정리하고, OpenAI API를 활용해 키워드와 긍·부정 감성 라벨을 포함한 모델 학습 데이터를 구축.</li>
+        <li><strong>NLP 기반 리뷰 분석 모델 개발:</strong>pko-T5 기반 키워드 추출·감성 라벨링 모델과 OpenAI GPT 파인튜닝 기반 카테고리 분류·대표 문장 생성 모델을 결합한 2단계 분석 파이프라인 개발에 참여.</li>
+        <li><strong>GPT 파인튜닝 및 모델 평가:</strong> 학습·검증 데이터를 JSONL 형식으로 구성하고, GPT-4o-mini 파인튜닝 및 카테고리 정확도, ROUGE, BLEU, BERTScore 등을 활용한 결과 평가 수행.</li>
+        <li><strong>모델 성능 평가:</strong> 파인튜닝한 GPT 모델을 29개 검증 샘플로 평가하고, 카테고리 커버리지 99.3%, BERTScore F1 0.77, METEOR 0.18, 평균 응답 시간 6.8초를 측정</li>
+        <li><strong>FastAPI 기반 모델 API 개발:</strong>두 AI 모델의 추론 기능을 REST API로 구현하고, 리뷰 텍스트와 키워드를 입력받아 분석 결과를 구조화된 JSON 형식으로 반환하도록 설계.</li>
+        <li><strong>Docker 기반 모델 배포:</strong> 각 AI 모델 API의 실행 환경과 의존성을 Dockerfile로 구성하고, Docker 컨테이너를 활용해 모델을 서비스에서 호출할 수 있는 형태로 배포.</li>
       </ul>
     </section>
 
+    <section class="detail-section challenges">
+      <h2>Outcome &amp; Learnings</h2>
+      <p>음식점 리뷰를 긍정·부정 키워드로 분석하고, 5가지 평가 기준별 대표 문장을 생성하여 웹 서비스에 제공하는 AI 파이프라인을 구현했습니다.</p>
+      <p>이 프로젝트를 통해 개별 NLP 모델을 학습시키는 것뿐 아니라, 모델 간 입출력 형식을 연결하고 API와 컨테이너 환경을 구성해 실제 서비스에서 활용할 수 있도록 통합하는 경험을 쌓았습니다.</p>
+    </section>
 
     <div class="detail-links">
       <a class="btn btn-primary" href="https://github.com/CineNorte-WEB/DeepLearning" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
 
     <nav class="pager" aria-label="다른 프로젝트">
-      <a href="tobemom.html">← 이전<strong>To Be Mom</strong></a>
-      <a class="next" href="dacon.html">다음 →<strong>난독화된 한글 리뷰 복원</strong></a>
+      <a href="tobemom.html">← Previous<strong>To Be Mom</strong></a>
+      <a class="next" href="dacon.html">Next →<strong>난독화된 한글 리뷰 복원</strong></a>
     </nav>
   </main>
 
-  <footer class="footer footer-narrow"><p>© 2026 오지윤 · 2026년 11월 업데이트</p></footer>
+  <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>
 </body>
 </html>

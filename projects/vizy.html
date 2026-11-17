@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIZY — K-Beauty AI Agent — Jiyoon Oh</title>
-  <meta name="description" content="An AI agent that analyzes face and product images, recommends K-beauty products that truly match the user&#x27;s tone, and explains why in natural language." />
+  <meta name="description" content="A RAG-based AI agent that combines a user&#x27;s beauty profile, product data, and conversation to recommend K-beauty products and explain each pick." />
+  <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/vizy.html" />
+  <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/vizy.html" />
   <link rel="icon" href="../favicon.ico" />
   <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/style.css" />
@@ -13,7 +15,9 @@
   <nav class="topnav" aria-label="Site">
     <div class="topnav-inner">
       <a href="../index.html" class="brand">Jiyoon Oh</a>
-      <div class="topnav-links">
+
+      <div class="topnav-right">
+       <div class="topnav-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#projects">Projects</a>
@@ -29,50 +33,56 @@
     <header class="detail-head">
       <p class="card-tag">Generative AI Course Project</p>
       <h1>VIZY — K-Beauty AI Agent</h1>
-      <p class="lede">An AI agent that analyzes face and product images, recommends K-beauty products that truly match the user&#x27;s tone, and explains why in natural language.</p>
+      <p class="lede">A RAG-based AI agent that combines a user&#x27;s beauty profile, product data, and conversation to recommend K-beauty products and explain each pick.</p>
     </header>
 
     <dl class="meta">
-      <div><dt>Role</dt><dd>Front-end &amp; AI Model Developer</dd></div>
+      <div><dt>Role</dt><dd>AI / RAG Developer &amp; Frontend Developer</dd></div>
       <div><dt>Period</dt><dd>Sep – Dec 2025</dd></div>
-      <div><dt>Tech</dt><dd>React, FastAPI, PostgreSQL + pgvector, OpenAI API</dd></div>
+      <div><dt>Tech</dt><dd>Python, LLaMA 3, OpenAI API (GPT-4o, GPT-4o-mini), OpenAI Embeddings, PostgreSQL + pgvector, DuckDuckGo, React</dd></div>
     </dl>
 
     <img class="detail-img" src="../assets/img/vizy.jpg" alt="VIZY — K-Beauty AI Agent cover" />
 
     <section class="detail-section">
       <h2>Overview</h2>
-      <p>Product colors look different across lighting, cameras, and filters, so online beauty recommendations often miss. VIZY matches colors in LAB space instead of relying on HEX codes or reviews, then uses a RAG-based agent to personalize recommendations and explain them.</p><p>It offers three features: Find the Look (match the makeup colors in a photo to real products), Find the Match (find similar alternatives to a product you already use), and an AI assistant that answers questions using your profile, past feedback, product data, and web search.</p>
+      <p>Online beauty recommendations often miss. A shade looks different under each light, camera, and filter, and HEX codes or star ratings say little about whether a product actually suits the person buying it.</p><p>VIZY, a three-person project for a generative AI course, tackles this with three features: Find the Look matches the makeup colors in a photo to real products, Find the Match finds alternatives to a product you already use, and an AI beauty assistant answers in conversation using your profile, past feedback, product data, and web search.</p><p>My focus was the layer that turns a color match into a personal recommendation. A color-based Top-3 is accurate, but it cannot handle requests like “a bit more matte, with a cooler summer feel.” I built the recommender and then a RAG agent that understands what the user is asking for, searches products by meaning, re-ranks them against the user&#x27;s preferences, and explains each pick.</p>
     </section>
 
     <figure class="detail-fig"><img class="detail-img" src="../assets/img/vizy-architecture.jpg" alt="System architecture: React front end, Node API gateway, and an AI core with product matcher, face matcher, and RAG agent." loading="lazy" /><figcaption>System architecture: React front end, Node API gateway, and an AI core with product matcher, face matcher, and RAG agent.</figcaption></figure>
 
-    <section class="detail-section">
-      <h2>What I did</h2>
+    <figure class="detail-fig"><img class="detail-img" src="../assets/img/vizy-rag-agent.jpg" alt="The RAG agent I built: the orchestrator classifies intent and parses the user&#x27;s context; recommendations go through vector search and re-ranking, and trend questions go to web search." loading="lazy" /><figcaption>The RAG agent I built: the orchestrator classifies intent and parses the user&#x27;s context; recommendations go through vector search and re-ranking, and trend questions go to web search.</figcaption></figure>
+
+    <section class="detail-section challenges">
+      <h2>Key contributions</h2>
       <ul>
-          <li>Developed the React front end, including the beauty profile, image upload, recommendation results, and chat interface.</li>
-          <li>Worked on the AI pipeline as one of two front-end and AI model developers on a three-person team.</li>
-          <li>Extracted lip, eye, and cheek regions with face landmarks and matched colors to a 673-product database using LAB color and the ΔE2000 color difference.</li>
-          <li>Built a RAG agent with intent classification (recommend, explain, trend), preference parsing into JSON, vector search over product and feedback embeddings (pgvector, HNSW), and rule-based re-ranking by brand, tone, finish, and keywords.</li>
-          <li>Added web search for trend questions and a conversation memory that improves recommendations over time and can be reset by the user.</li>
+        <li><strong>LLM-powered Top-3 recommendation</strong> Built a Top-3 recommender that writes a reason for each pick, first on LLaMA 3 and then on the OpenAI API, with JSON-only output and prompt rules that keep results consistent.</li>
+        <li><strong>RAG agent workflow</strong> Classified each message as recommend, explain, or trend, parsed free-form feedback into structured preferences (tone, finish, brightness, saturation, liked and disliked keywords), and routed it to the right pipeline.</li>
+        <li><strong>Semantic search and personalized re-ranking</strong> Stored product descriptions and each user&#x27;s conversation history as OpenAI embeddings in PostgreSQL + pgvector, retrieved the top 20 candidates, and re-ranked them by vector similarity (1.0), current preferences (0.7), and saved profile (0.3) to pick the final three.</li>
+        <li><strong>Synthetic data enrichment</strong> Generated product reviews and personal-color data with generative AI, giving the knowledge base unstructured text for semantic search beyond product specs.</li>
+        <li><strong>Conversational features and UI</strong> Added per-user conversation memory and DuckDuckGo search for trend questions, and built the chatbot and recommendation-result screens in React.</li>
       </ul>
     </section>
 
-    <section class="detail-section">
-      <h2>Result</h2>
+    <section class="detail-section challenges">
+      <h2>Challenges and how I solved them</h2>
       <ul>
-          <li>Expanded the initial plan (single ΔE color match with LLaMA 3) into a full agent combining RAG, re-ranking, web search, and personalized memory, and deployed the service.</li>
+        <li><strong>LLaMA 3 output was unstable.</strong> Parsing and explanations from LLaMA 3 often broke format or drifted. I moved these steps to the OpenAI API, required JSON-only output, and added a fallback that recovers the JSON block or fills in a safe default, so one bad response never breaks the screen.</li>
+        <li><strong>Color matching could not follow subjective requests.</strong> The Top-3 was accurate in color, but requests like “more matte, cooler” were out of its reach. I added the RAG agent on top: parse the request into structured preferences, search products by meaning, then re-rank against those preferences.</li>
+        <li><strong>The model invented products and features.</strong> Early answers mentioned products outside the database or claimed attributes we never provided. Prompts now allow only products in the candidate list and only the given attributes. When nothing matches exactly, the agent recommends the closest option and explains the trade-off instead of refusing — for example, a semi-matte for someone who asked for matte.</li>
+        <li><strong>Long-term profile and current request pulled in different directions.</strong> A user&#x27;s saved profile could override what they had just asked for. I weighted the score so that the current conversation outranks the stored profile, and the stored profile only nudges the ranking.</li>
+        <li><strong>The database could not answer trend questions.</strong> Questions like “what are this year&#x27;s lip trends?” have no answer in a static product DB. The trend intent now skips retrieval, pulls the top three DuckDuckGo results, and summarizes them for the user&#x27;s tone.</li>
       </ul>
     </section>
 
     <div class="detail-links">
-        <a class="btn btn-primary" href="https://genai-project-11-final.vercel.app/" target="_blank" rel="noopener">Live demo ↗</a>
-        <a class="btn" href="https://github.com/ljh040218/GENAI_project" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-primary" href="https://genai-project-11-final.vercel.app/" target="_blank" rel="noopener">Live demo ↗</a>
+      <a class="btn" href="https://github.com/ljh040218/GENAI_project" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
 
-      <nav class="pager" aria-label="More projects">
-        <a class="next" href="momentum.html">Next →<strong>Momentum</strong></a>
-      </nav>
+    <nav class="pager" aria-label="More projects">
+      <a class="next" href="momentum.html">Next →<strong>Momentum</strong></a>
+    </nav>
   </main>
 
   <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>

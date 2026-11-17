@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Camchelin — Jiyoon Oh</title>
-  <meta name="description" content="A deep learning system that analyzes restaurant reviews and turns them into clear, category-level summaries." />
+  <meta name="description" content="Camchelin is an AI-powered restaurant review platform that highlights both positive and negative feedback to support balanced dining decisions." />
+  <link rel="alternate" hreflang="en" href="https://askjiyun.github.io/projects/camchelin.html" />
+  <link rel="alternate" hreflang="ko" href="https://askjiyun.github.io/ko/projects/camchelin.html" />
   <link rel="icon" href="../favicon.ico" />
   <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/style.css" />
@@ -13,6 +15,7 @@
   <nav class="topnav" aria-label="Site">
     <div class="topnav-inner">
       <a href="../index.html" class="brand">Jiyoon Oh</a>
+      <div class="topnav-right">
       <div class="topnav-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#experience">Experience</a>
@@ -20,6 +23,7 @@
         <a href="../index.html#contact">Contact</a>
       </div>
       <div class="lang-switch" aria-label="Language"><a href="camchelin.html" lang="en" aria-current="page">EN</a><a href="../ko/projects/camchelin.html" lang="ko">KOR</a></div>
+      </div>
     </div>
   </nav>
 
@@ -28,43 +32,58 @@
     <header class="detail-head">
       <p class="card-tag">Deep Learning Project · Review Analysis</p>
       <h1>Camchelin</h1>
-      <p class="lede">A deep learning system that analyzes restaurant reviews and turns them into clear, category-level summaries.</p>
+      <p class="lede">An AI-powered restaurant review platform that brings both positive and negative feedback to light, helping users discover the strengths and weaknesses of restaurants beyond ratings alone.</p>
     </header>
 
     <dl class="meta">
-      <div><dt>Role</dt><dd>Deep Learning Member</dd></div>
+      <div><dt>Role</dt><dd>AI Developer</dd></div>
       <div><dt>Period</dt><dd>Sep 2024 – Feb 2025</dd></div>
-      <div><dt>Tech</dt><dd>pko-T5, OpenAI GPT fine-tuning, Python</dd></div>
+      <div><dt>Tech</dt><dd>Python, Hugging Face Transformers, pko-T5, OpenAI GPT Fine-tuning, FastAPI, Docker</dd></div>
     </dl>
 
     <img class="detail-img" src="../assets/img/camchelin.jpg" alt="Camchelin cover" />
 
     <section class="detail-section">
       <h2>Overview</h2>
-      <p>Using platform and user review data, Camchelin identifies positive and negative feedback about a restaurant and extracts the keywords behind it.</p>
+      <p>Restaurant review platforms often make it difficult to identify negative feedback hidden behind high ratings and overwhelmingly positive reviews. Users must read through numerous reviews to understand a restaurant's actual strengths and weaknesses.</p>
+      <p>Camchelin is an AI-powered restaurant review platform designed to address this problem. It extracts positive and negative keywords from customer reviews and generates representative summaries across five categories: taste, service, cleanliness, atmosphere, and value for money.</p>
+      <p>By presenting both positive and negative feedback, the platform helps users make more informed and balanced dining decisions.</p>
     </section>
 
+    <section class="detail-section">
+      <h2>AI System Pipeline</h2>
+      <p>Developed a two-stage NLP pipeline to analyze restaurant reviews collected from Naver Place, Kakao Map, and user submissions.</p>
+      <img class="detail-img" src="../../assets/img/camchelin-ai-pipeline.jpg" alt="Camchelin AI review analysis pipeline" loading="lazy"/>
+    </section>  
     
 
-    <section class="detail-section">
-      <h2>What I did</h2>
+    <section class="detail-section challenges">
+      <h2>Key Contributions</h2>
       <ul>
-          <li>Fine-tuned Hugging Face&#x27;s pko-t5-base model to extract keywords from review text and classify them as positive or negative.</li>
-          <li>Grouped keywords into five categories (taste, service, atmosphere, sanitation, cost-effectiveness).</li>
-          <li>Generated a representative sentence for each category with a fine-tuned GPT model.</li>
-          <li>Owned model training, performance evaluation, and results analysis throughout the project.</li>
+        <li><strong>Review Data Collection & Preparation:</strong> Collected and organized restaurant reviews from Naver Place and Kakao Map. Used the OpenAI API to generate labeled training data containing review keywords and their corresponding positive or negative sentiment labels.</li>
+        <li><strong>NLP-Based Review Analysis Pipeline:</strong>Contributed to developing a two-stage NLP pipeline combining a fine-tuned pko-T5 model for keyword extraction and sentiment labeling with a fine-tuned GPT model for category classification and representative sentence generation.</li>
+        <li><strong>GPT Fine-tuning & Model Evaluation:</strong> Prepared training and validation datasets in JSONL format and fine-tuned GPT-4o-mini to classify review keywords into five categories and generate natural Korean summaries. Evaluated model outputs using category accuracy, ROUGE, BLEU, and BERTScore.</li>
+        <li><strong>Model Evaluation &amp; Performance:</strong> Evaluated the fine-tuned GPT model on 29 validation samples, measuring 99.3% category coverage, a BERTScore F1 of 0.77, a METEOR score of 0.18, and an average response time of 6.8 seconds.</li>
+        <li><strong>FastAPI-Based Model Serving:</strong>Developed REST API endpoints for both NLP models, enabling review text and extracted keywords to be processed and returned as structured JSON responses for integration with the web service.</li>
+        <li><strong>Docker Containerization & Deployment:</strong> Configured Docker environments for both model APIs, including dependencies and server execution settings. Containerized and deployed the APIs to make the NLP pipeline accessible to the application.</li>
       </ul>
     </section>
 
+    <section class="detail-section challenges">
+      <h2>Outcome &amp; Learnings</h2>
+      <p>Developed and integrated a two-stage NLP pipeline that transforms unstructured restaurant reviews into sentiment-labeled keywords and category-specific summaries, enabling users to explore restaurant strengths and weaknesses through the Camchelin web platform.</p>
+      <p>Through this project, I gained hands-on experience across the AI development lifecycle, from data preparation and model fine-tuning to evaluation, API development, and Docker-based deployment.</p>
+      <p>The experience highlighted the importance of building reliable connections between individual AI models and delivering their outputs in a format that can be used effectively within a real application.</p>
+    </section>
 
     <div class="detail-links">
-        <a class="btn btn-primary" href="https://github.com/CineNorte-WEB/DeepLearning" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-primary" href="https://github.com/CineNorte-WEB/DeepLearning" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
 
-      <nav class="pager" aria-label="More projects">
-        <a href="tobemom.html">← Previous<strong>To Be Mom</strong></a>
-        <a class="next" href="dacon.html">Next →<strong>Restoring Obfuscated Korean Reviews</strong></a>
-      </nav>
+    <nav class="pager" aria-label="More projects">
+      <a href="tobemom.html">← Previous<strong>To Be Mom</strong></a>
+      <a class="next" href="dacon.html">Next →<strong>Restoring Obfuscated Korean Reviews</strong></a>
+    </nav>
   </main>
 
   <footer class="footer footer-narrow"><p>© 2026 Jiyoon Oh · Last updated November 2026</p></footer>
